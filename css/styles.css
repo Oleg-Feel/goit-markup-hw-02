@@ -1,19 +1,27 @@
 :root {
+    --primary-font-family: 'Roboto', sans-serif;
+    --secondary-font-family: 'Raleway', sans-serif;
+
     --primary-text-color: #212121;
     --secondary-text-color: #757575;
+    --text-color-light: #ffffff;
     --accent-color: #2196F3;
+    --hover-accent-color: #188CE8;
+
+    --btn-filter-color: #F5F4FA;
 }
 
 body {
-    background: #E5E5E5;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+
+    background: var(--text-color-light);
+    /* background: #F5F4FA; */
     color: var(--primary-text-color);
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--primary-font-family);
 }
 
-/* осн цвет  color: */
-/* втор цвет  color: #757575;*/
-/* фокус color:  #2196F3;
-        background: #2196F3;*/
+
 .list {
     list-style: none;
 }
@@ -25,11 +33,11 @@ body {
 
 /* header */
 .logo {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--secondary-text-color);
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    letter-spacing: 0.03em;
+
 
     color: var(--primary-text-color);
 }
@@ -38,36 +46,30 @@ body {
     color: var(--accent-color);
 }
 
-/* .logo-part:hover,
-.logo-part:focus {
-    color: var(--primary-text-color);
-} */
 
 .nav-list-item,
 .contact {
-    font-family: inherit;
     font-weight: 500;
-    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 
+}
+
+.nav-list-item {
     color: var(--primary-text-color);
+}
+
+.contact {
+    color: var(--secondary-text-color);
 }
 
 .nav-list-item.carent {
     color: var(--accent-color)
 }
 
-/* .navigation .link:hover,
-.navigation .link:focus,
-.nav-list-item:hover,
-.nav-list-item:focus,
-.contact:hover,
-.contact:focus,  */
-.header a:hover,
-.header a:focus,
-.footer a:hover,
-.footer a:focus {
+
+.accent:hover,
+.accent:focus {
     color: var(--accent-color);
 }
 
@@ -83,10 +85,11 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    color: #FFFFFF;
+    color: var(--text-color-light);
 }
 
 .button {
+    font-family: var(--primary-font-family);
     width: 200px;
     height: 50px;
 
@@ -95,18 +98,17 @@ body {
     line-height: 1.88;
 
     cursor: pointer;
-    /* display: flex; */
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
 
     background-color: var(--accent-color);
-    color: #FFFFFF;
+    color: var(--text-color-light);
 }
 
 .button:hover,
 .button:focus {
-    background-color: #188CE8;
+    background-color: var(--hover-accent-color);
 
 }
 
@@ -117,16 +119,14 @@ body {
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
-    letter-spacing: 0.03em;
 }
 
 .base-list .title {
     font-weight: 700;
-    font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0.03em;
+    text-transform: uppercase;
 
-    color: var(--primary-text-color);
+
 }
 
 .team-list .title {
@@ -135,15 +135,12 @@ body {
     line-height: 1.19;
 
     text-align: center;
-    letter-spacing: 0.03em;
 }
 
 
 .base-list .text {
-    font-size: 14px;
     line-height: 1.71;
 
-    letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
 
@@ -152,27 +149,34 @@ body {
     line-height: 1.19;
 
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
 
 /* ---------footer--------- */
 .footer .logo {
-    color: #FFFFFF;
+    color: var(--text-color-light);
 }
 
 .footer-link {
-    font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
+    font-style: normal;
 
-    color: #FFFFFF;
+    color: var(--text-color-light);
 }
 
-/* portfolio */
+.footer .contact {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .contact:hover,
+.footer .contact:focus {
+    color: var(--accent-color);
+}
+
+/* ----------portfolio---------- */
 
 .btn-filter {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--primary-font-family);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -180,22 +184,21 @@ body {
     cursor: pointer;
 
     text-align: center;
-    letter-spacing: 0.03em;
     height: 38px;
 
     color: var(--primary-text-color);
 
-    background: #F5F4FA;
+    background: var(--btn-filter-color);
     border-radius: 4px;
 }
 
 .btn-filter:hover,
 .btn-filter:focus {
     background-color: var(--accent-color);
-    color: #FFFFFF;
+    color: var(--text-color-light);
 }
 
-.portfolio h2 {
+.portfolio-title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -204,11 +207,9 @@ body {
     color: var(--primary-text-color)
 }
 
-.portfolio p {
+.portfolio-text {
     font-size: 16px;
     line-height: 1.88;
-
-    letter-spacing: 0.03em;
 
     color: var(--secondary-text-color);
 }
