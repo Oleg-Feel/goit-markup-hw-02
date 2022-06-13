@@ -33,7 +33,7 @@ body {
 
 /* header */
 .logo {
-    font-family: var(--secondary-text-color);
+    font-family: var(--secondary-font-family);
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
@@ -123,10 +123,9 @@ body {
 
 .base-list .title {
     font-weight: 700;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 1.14;
     text-transform: uppercase;
-
-
 }
 
 .team-list .title {
@@ -158,6 +157,7 @@ body {
 }
 
 .footer-link {
+    font-weight: 400;
     line-height: 1.71;
     font-style: normal;
 
